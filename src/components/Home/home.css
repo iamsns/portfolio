@@ -1,0 +1,18 @@
+.home-section {
+    background: linear-gradient(90deg, #0c2a48 0%, #000407 100%);
+}
+
+.social-icon {
+    font-size: 2rem;
+    transition: 0.3s ease;
+}
+
+.social-icon:hover {
+    opacity: 0.9;
+}
+.profile_col {
+    height: 89vh;
+}
+.profile-img {
+}
+
