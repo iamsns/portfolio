@@ -3,6 +3,7 @@ import { Container, Row, Col, Button, Badge, Image } from 'react-bootstrap';
 import { FaLinkedin } from 'react-icons/fa';
 import './home.css';
 import TypingEffect from '../TypingEffect/TypingEffect';
+import DotAnimation from './DotAnimation';
 
 const Home = () => {
     return (
@@ -25,13 +26,12 @@ const Home = () => {
                             <a href="https://www.linkedin.com/in/shiv-b9f61/" target='_blank'><FaLinkedin className="social-icon" /></a>
                         </div>
                     </Col>
-                    <Col md={6} className="text-center mt-4 mt-md-0 profile_col">
-                        <Image
-                            src='images/img3.png'
-                            alt="shiv_image"
-                            className="profile-img"
-                            fluid
-                        />
+
+                    <Col
+                        md={6}
+                        className="pt-4 pt-md-0 d-flex justify-content-center align-items-center dot-animation-wrapper"
+                    >
+                        <DotAnimation />
                     </Col>
                 </Row>
             </Container>

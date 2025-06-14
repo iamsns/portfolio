@@ -24,7 +24,7 @@ const About = () => {
                             boxShadow: '0px 0px 20px grey', border: 'none', maxWidth: '400px'
                         }}>
                             <Card.Img
-                                src="images/img1.png"
+                                src="images/img3.png"
                                 alt="Profile"
                                 className="rounded-4 img-fluid"
                                 style={{
