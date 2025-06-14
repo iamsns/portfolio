@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Button, Badge, Image } from 'react-bootstrap';
-import { FaFacebookF, FaLinkedin, FaDribbble } from 'react-icons/fa';
+import { FaLinkedin } from 'react-icons/fa';
 import './home.css';
 import TypingEffect from '../TypingEffect/TypingEffect';
 
@@ -27,9 +27,10 @@ const Home = () => {
                     </Col>
                     <Col md={6} className="text-center mt-4 mt-md-0 profile_col">
                         <Image
-                            src='self.png'
+                            src='images/img3.png'
                             alt="shiv_image"
                             className="profile-img"
+                            fluid
                         />
                     </Col>
                 </Row>

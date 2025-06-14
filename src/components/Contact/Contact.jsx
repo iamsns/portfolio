@@ -47,18 +47,18 @@ const Contact = () => {
                         <Col md={4} className="mb-md-0">
                             <div
                                 style={{
-                                    width:"350px",
+                                    maxWidth:"350px",
                                     backgroundColor: "#092f4a",
                                     borderRadius: "10px",
                                     textAlign: "center",
-                                    backgroundImage: 'url(bg.jpg)',
+                                    backgroundImage: 'url(images/bg.jpg)',
                                     backgroundSize: 'cover',
                                     backgroundPosition: 'center',
                                     backgroundRepeat: 'no-repeat'
                                 }}
                             >
                                 <Image
-                                    src="self.png"
+                                    src="images/img2.png"
                                     rounded
                                     fluid
                                     style={{

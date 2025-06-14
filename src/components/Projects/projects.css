@@ -1,11 +1,11 @@
 .custom-arrow {
-    color: black;
-    background: #e0e0e0;
     position: absolute;
     top: 40%;
     z-index: 2;
     cursor: pointer;
-    box-shadow: 0px 0px 10px 4px rgba(100, 100, 100, 1);
+    background-color: rgba(23, 96, 168, 0.8);
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
     font-size: 23px;
     z-index: 1;
     padding: 4px 10px 8px;
@@ -14,18 +14,74 @@
 }
 
 .custom-arrow.next {
-  right: -50px;
+    right: -50px;
 }
 
 .custom-arrow.prev {
-  left: -50px;
+    left: -50px;
+}
+
+@media (max-width: 650px) {
+    .custom-arrow.next {
+        right: 10px;
+    }
+
+    .custom-arrow.prev {
+        left: 10px;
+    }
 }
 
 .slick-slider {
     display: flex !important;
 }
+
 .project-section {
     background: linear-gradient(90deg, #0c2a48 0%, #000407 100%);
     color: white;
     padding: 60px 0;
+}
+
+.project-section .slick-dots li button:before {
+    color: #fff;
+    /* Color of dots */
+    font-size: 10px;
+    opacity: 0.5;
+}
+
+.project-section .slick-dots li.slick-active button:before {
+    color: #1E90FF;
+    /* Active dot color */
+    opacity: 1;
+}
+
+.custom-dot-wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px 0;
+    margin-top: 20px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.custom-dot-track {
+    display: flex !important;
+    gap: 10px;
+    transition: transform 0.3s ease-in-out;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.custom-dot-track li {
+    flex: 0 0 auto;
+}
+
+.custom-dot-track li button:before {
+    font-size: 10px;
+    color: #aaa;
+    opacity: 0.7;
+}
+
+.custom-dot-track li.slick-active button:before {
+    color: #0dcaf0;
+    opacity: 1;
 }

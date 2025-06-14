@@ -14,10 +14,9 @@ const Heading = () => {
                         <Nav.Link href="#home">HOME</Nav.Link>
                         <Nav.Link href="#about">ABOUT ME</Nav.Link>
                         <Nav.Link href="#projects">PROJECTS</Nav.Link>
-                        {/* <Nav.Link href="#resume">RESUME</Nav.Link> */}
                         <Nav.Link href="#contact">CONTACTS</Nav.Link>
-                    </Nav>
                     <Button href="#contact" variant="primary" size="lg" className=" rounded-pill">LET'S TALK</Button>
+                    </Nav>
                 </div>
             </Navbar.Collapse>
         </Navbar>

@@ -8,8 +8,11 @@ const experiences = [
         client: "CREDABLE",
         duration: "MAR 2023 - APR 2025",
         type: "FULL TIME",
-        description:
-            "CredAble is a fintech company that provides business loans based on invoices generate by corporate. It offers fast, transparent, and flexible working capital solutions, helping businesses access funds quickly, improve cash flow management, and support their growth effectively.",
+        description: [
+            "Developed multiple modules with maker-checker functionality for Admin, Corporate, and Distributor portals, improving operational efficiency by 25%",
+            "Designed and developed a dynamic form system for bank configuration within the DFX fintech platform",
+            "Implemented MLE encryption & decryption using Subtle Crypto Library, securing 100% of API requests/responses across multiple clients.",
+        ],
     },
     {
         role: "Software Engineer I",
@@ -18,22 +21,28 @@ const experiences = [
         duration: "JUL 2022 - FEB 2023",
         type: "FULL TIME",
         description:
-            "Honasa Consumer Ltd. is a leading Indian digital-first beauty and personal care company. Its flagship brand, Mamaearth, offers toxin-free products for babies and adults. The company also owns Aqualogica, a hydration-focused skincare brand, delivering effective and sustainable solutions for healthy skin.",
+            ["Improved performance by modularizing components, using React.lazy for code-splitting, and optimizing with pure components—boosting load speed by 20% and cutting memory use by 30%.",
+                "Implemented dynamic theming and font management in Aqualogica to support white-label customization and brand consistency",
+                "Integrated third-party services (Razorpay, IDfy, Digio, e-NACH) for payment processing, e-signatures, and digital verification, enhancing platform capabilities"
+            ],
     },
     {
         role: "Web Developer",
         company: "CONJOINIX TOTAL SOLUTION | CHANDIGARH",
-        client:null,
+        client: null,
         duration: "SEP 2021 - JUL 2022",
         type: "FULL TIME",
         description:
-            "Conjoinix Total Solutions is a Chandigarh-based company specializing in GPS vehicle tracking. Their advanced system offers real-time location tracking, route playback, fleet safety features, and seamless integration to improve vehicle monitoring and security.",
+            ["Developed a real-time tracking system for commercial vehicles, enabling government authorities to monitor fleet movement and compliance using GPS and geofencing.",
+                "Built an analytics dashboard with trip history, stoppage reports, and fuel efficiency insights to support regulatory audits and decision-making.",
+                "Built a centralized system to manage SIM lifecycle—from lot assignment to activation—improving traceability and reducing manual overhead.",
+            ],
     }
 ];
 
 const Experience = () => {
     return (
-        <div style={{ minHeight: "100vh", background: 'linear-gradient(90deg, #000407 0%, #0c2a48 100%)', color: "white", padding: "4rem 0" }}>
+        <div className="experience_section" style={{ minHeight: "100vh", background: 'linear-gradient(90deg, #000407 0%, #0c2a48 100%)', color: "white", padding: "4rem 0" }}>
             <Container>
                 <Badge className="mb-3 px-3 py-2 custom-badge">
                     EXPERIENCE
@@ -49,7 +58,7 @@ const Experience = () => {
                         style={{ backgroundColor: "#132037", border: "none" }}
                     >
                         <Row className="g-0">
-                            <Col md={4} className="p-4" style={{ backgroundColor: "#0d6efd", borderRadius: "0.5rem" }}>
+                            <Col sm={5} md={3} className="p-4" style={{ backgroundColor: "#0d6efd", borderRadius: "0.5rem" }}>
                                 <h4 className="fw-bold">{exp.role}</h4>
                                 <p className="mb-1">{exp.company}</p>
                                 {exp.client && <p className="mb-1">Client: {exp.client}</p>}
@@ -58,9 +67,12 @@ const Experience = () => {
                                     {exp.type}
                                 </Badge>
                             </Col>
-                            <Col md={8} className="p-4">
-                                <h5 className="fs-2 fw-bold text-white">About Company</h5>
-                                <p className="text-light">{exp.description}</p>
+                            <Col sm={7} md={9} className="p-4">
+                                <p className="text-light">{
+                                    exp.description.map((content, index) => {
+                                        return <li key={index}>{content}</li>
+                                    })
+                                }</p>
                             </Col>
                         </Row>
                     </Card>

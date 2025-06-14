@@ -3,28 +3,35 @@ import { Badge, Container } from 'react-bootstrap';
 import Slider from 'react-slick';
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
 import './projects.css'
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 const projects = [
     {
-        image: "/project1.jpg",
-        title: "Website Design",
-        tags: "Web Design, App Design",
+        image: "/images/aqualogica.png",
+        title: "Aqualogica",
+        tags: "E-commerce, Skincare, Product Catalog",
     },
     {
-        image: "/project2.jpg",
-        title: "Website Design",
-        tags: "Web Design, App Design",
+        image: "/images/vahansuraksha.png",
+        title: "Vahan Suraksha",
+        tags: "Vehicle Tracking System, AIS-140 Platform",
     },
     {
         image: "/project3.jpg",
-        title: "Website Design",
-        tags: "Web Design, App Design",
+        title: "Rk Library",
+        tags: "EdTech, Library Management, Book Inventory",
     },
     {
-        image: "/project4.jpg",
-        title: "Website Design",
-        tags: "Web Design, App Design",
+        image: "/images/portfolio.png",
+        title: "Portfolio",
+        tags: "Personal Branding, Project Showcase",
     },
+      {
+        image: "/images/drumkit.png",
+        title: "Drum Kit",
+        tags: "Mini Project, Sound Effects",
+    }
 ];
 
 const CustomNextArrow = ({ onClick }) => (
@@ -40,26 +47,70 @@ const CustomPrevArrow = ({ onClick }) => (
 );
 
 const Projects = () => {
+    // const settings = {
+    //     dots: true,
+    //     infinite: true,
+    //     speed: 500,
+    //     slidesToShow: 3,
+    //     slidesToScroll: 1,
+    //     arrows: true,
+    //     nextArrow: <CustomNextArrow />,
+    //     prevArrow: <CustomPrevArrow />,
+    //     responsive: [
+    //         {
+    //             breakpoint: 992,
+    //             settings: { slidesToShow: 2 },
+    //         },
+    //         {
+    //             breakpoint: 768,
+    //             settings: { slidesToShow: 1 },
+    //         },
+    //     ],
+    // };
+
     const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        arrows: true,
-        nextArrow: <CustomNextArrow />,
-        prevArrow: <CustomPrevArrow />,
-        responsive: [
-            {
-                breakpoint: 992,
-                settings: { slidesToShow: 2 },
-            },
-            {
-                breakpoint: 768,
-                settings: { slidesToShow: 1 },
-            },
-        ],
-    };
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    nextArrow: <CustomNextArrow />,
+    prevArrow: <CustomPrevArrow />,
+    customPaging: (i) => <button>{i + 1}</button>, // Optional: Show number
+    appendDots: (dots) => {
+        // Limit to maximum 5 dots centered
+        const maxDots = 5;
+        const totalDots = dots.length;
+
+        if (totalDots <= maxDots) {
+            return <ul>{dots}</ul>;
+        }
+
+        const currentIndex = dots.findIndex((dot) =>
+            dot.props.className.includes('slick-active')
+        );
+
+        let start = Math.max(0, currentIndex - Math.floor(maxDots / 2));
+        if (start + maxDots > totalDots) {
+            start = totalDots - maxDots;
+        }
+
+        const visibleDots = dots.slice(start, start + maxDots);
+        return <ul>{visibleDots}</ul>;
+    },
+    responsive: [
+        {
+            breakpoint: 992,
+            settings: { slidesToShow: 2 },
+        },
+        {
+            breakpoint: 768,
+            settings: { slidesToShow: 1 },
+        },
+    ],
+};
+
 
     return (
         <section  className='project-section'>
@@ -79,16 +130,16 @@ const Projects = () => {
                                     overflow: 'hidden',
                                     color: '#000',
                                     boxShadow: '0 0 20px rgba(0,0,0,0.1)',
-                                    display: 'flex'
+                                    padding: '10px'
                                 }}
                             >
                                 <div style={{ position: 'relative' }}>
                                     <img
                                         src={proj.image}
                                         alt={proj.title}
-                                        style={{ width: '100%', height: '220px', objectFit: 'cover' }}
+                                        style={{ width: '100%', height: '220px', objectFit: 'cover', borderRadius:'10px' }}
                                     />
-                                    <div
+                                    {/* <div
                                         style={{
                                             position: 'absolute',
                                             top: '50%',
@@ -104,8 +155,8 @@ const Projects = () => {
                                             fontSize: '20px',
                                         }}
                                     >
-                                        +
-                                    </div>
+                                        
+                                    </div> */}
                                 </div>
                                 <div className="p-3">
                                     <h5 className="mb-1">{proj.title}</h5>
