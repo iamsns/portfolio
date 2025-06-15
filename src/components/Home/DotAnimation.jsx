@@ -52,22 +52,22 @@ const DotAnimation = () => {
                     const dx = mouse.x - dot.x;
                     const dy = mouse.y - dot.y;
                     const distance = Math.sqrt(dx * dx + dy * dy);
-                    const maxDist = 60;
+                    const maxDist = 80;
 
                     if (distance < maxDist) {
                         const angle = Math.atan2(dy, dx);
                         const force = (maxDist - distance) / maxDist;
-                        const moveX = Math.cos(angle) * force * 8;
-                        const moveY = Math.sin(angle) * force * 8;
+                        const moveX = Math.cos(angle) * force * 10;
+                        const moveY = Math.sin(angle) * force * 10;
                         dot.x -= moveX;
                         dot.y -= moveY;
                     } else {
-                        dot.x += (dot.baseX - dot.x) * 0.05;
-                        dot.y += (dot.baseY - dot.y) * 0.05;
+                        dot.x += (dot.baseX - dot.x) * 0.07;
+                        dot.y += (dot.baseY - dot.y) * 0.07;
                     }
                 } else {
-                    dot.x += (dot.baseX - dot.x) * 0.05;
-                    dot.y += (dot.baseY - dot.y) * 0.05;
+                    dot.x += (dot.baseX - dot.x) * 0.07;
+                    dot.y += (dot.baseY - dot.y) * 0.07;
                 }
 
                 ctx.beginPath();
@@ -113,7 +113,7 @@ const DotAnimation = () => {
                 width: '100%',
                 height: '100%',
                 display: 'block',
-                cursor: 'none',
+                cursor: 'pointer',
                 borderRadius: '20px',
             }}
         />
