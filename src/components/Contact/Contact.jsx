@@ -58,7 +58,7 @@ const Contact = () => {
                                 }}
                             >
                                 <Image
-                                    src="images/img2.png"
+                                    src="images/img1.png"
                                     rounded
                                     fluid
                                     style={{
