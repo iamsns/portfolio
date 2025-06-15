@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './TypingEffect.css'; // custom CSS for cursor and animation
+import './TypingEffect.css';
 
 const titles = [
   'FULL STACK ENGINEER',
@@ -9,8 +9,8 @@ const titles = [
 
 const TypingEffect = () => {
   const [text, setText] = useState('');
-  const [index, setIndex] = useState(0); // title index
-  const [charIndex, setCharIndex] = useState(0); // character index
+  const [index, setIndex] = useState(0); 
+  const [charIndex, setCharIndex] = useState(0); 
   const [deleting, setDeleting] = useState(false);
 
   useEffect(() => {

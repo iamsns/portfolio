@@ -21,7 +21,7 @@ const About = () => {
                         <motion.div
                             initial={{ x: -60, opacity: 0 }}
                             whileInView={{ x: 0, opacity: 1 }}
-                            viewport={{ once: false, amount: 0.5 }}
+                            viewport={{ once: false, amount: 0.2 }}
                             transition={{ duration: 1, ease: 'easeOut' }}
                         >
                             <Card className="text-center" style={{
@@ -46,7 +46,7 @@ const About = () => {
                         <motion.div
                             initial={{ x: 60, opacity: 0 }}
                             whileInView={{ x: 0, opacity: 1 }}
-                            viewport={{ once: false, amount: 0.5 }}
+                            viewport={{ once: false, amount: 0.2 }}
                             transition={{ duration: 1, ease: 'easeOut' }}
                         >
                             <Badge className="mb-3 px-3 py-2 custom-badge">
@@ -64,7 +64,7 @@ const About = () => {
                                     <h3>3.6+</h3>
                                     <p className="text-light" style={{ opacity: 0.7 }}>Years Experience</p>
                                 </Col>
-                                <Col xs={5}  sm={4}className='about_details'>
+                                <Col xs={5} sm={4} className='about_details'>
                                     <h4>8+</h4>
                                     <p className="text-light" style={{ opacity: 0.7 }}>Projects</p>
                                 </Col>
