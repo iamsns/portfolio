@@ -19,7 +19,7 @@ const About = () => {
 
                     <Col md={5} className="mb-4 mb-md-0 mt-5 mt-md-0" style={{ display: "flex", justifyContent: "center" }}>
                         <motion.div
-                            initial={{ x: -100, opacity: 0 }}
+                            initial={{ x: -60, opacity: 0 }}
                             whileInView={{ x: 0, opacity: 1 }}
                             viewport={{ once: false, amount: 0.5 }}
                             transition={{ duration: 1, ease: 'easeOut' }}
@@ -44,7 +44,7 @@ const About = () => {
                     </Col>
                     <Col md={7}>
                         <motion.div
-                            initial={{ x: 100, opacity: 0 }}
+                            initial={{ x: 60, opacity: 0 }}
                             whileInView={{ x: 0, opacity: 1 }}
                             viewport={{ once: false, amount: 0.5 }}
                             transition={{ duration: 1, ease: 'easeOut' }}
