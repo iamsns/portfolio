@@ -8,7 +8,7 @@ import DotAnimation from './DotAnimation';
 const Home = () => {
     return (
         <div className="home-section text-white d-flex align-items-center">
-            <Container>
+            <Container className='home_container'>
                 <Row className="align-items-center">
                     <Col md={6}>
                         <Badge className="mb-3 px-3 py-2 custom-badge">

@@ -71,7 +71,7 @@ const About = () => {
                             </Row>
 
                             <div className="mt-4">
-                                <a href="/ShivNarayanSharma_Resume.pdf" download target='_blank'><Button variant="primary" className="px-4 py-2" >
+                                <a href="/ShivNarayanSharma_Resume.pdf" download target='_blank'><Button variant="primary" className="px-4 py-2 hover_effect" >
                                     Download Resume
                                     <FaDownload className="social-icon text-white ms-1" style={{ fontSize: "14px" }} />
                                 </Button></a>

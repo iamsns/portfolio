@@ -91,3 +91,8 @@ li {
   margin-bottom: 12px;
 }
 }
+.hover_effect:hover {
+      transition: transform 0.9s ease, opacity 0.9s ease !important;
+    transform: scale(1.01) !important;
+    opacity: 0.8 !important;
+}

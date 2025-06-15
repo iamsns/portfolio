@@ -77,13 +77,13 @@ const projects = [
 ];
 
 const CustomNextArrow = ({ onClick }) => (
-    <div className="custom-arrow next" onClick={onClick}>
+    <div className="custom-arrow next hover_effect" onClick={onClick}>
         <FaArrowRight />
     </div>
 );
 
 const CustomPrevArrow = ({ onClick }) => (
-    <div className="custom-arrow prev" onClick={onClick}>
+    <div className="custom-arrow prev hover_effect" onClick={onClick}>
         <FaArrowLeft />
     </div>
 );

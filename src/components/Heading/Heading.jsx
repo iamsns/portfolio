@@ -15,7 +15,7 @@ const Heading = () => {
                         <Nav.Link href="#about">ABOUT ME</Nav.Link>
                         <Nav.Link href="#projects">PROJECTS</Nav.Link>
                         <Nav.Link href="#contact">CONTACTS</Nav.Link>
-                    <Button href="#contact" variant="primary" size="lg" className=" rounded-pill">LET'S TALK</Button>
+                    <Button href="#contact" variant="primary" className=" rounded-pill hover_effect">LET'S TALK</Button>
                     </Nav>
                 </div>
             </Navbar.Collapse>

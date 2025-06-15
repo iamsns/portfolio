@@ -147,7 +147,7 @@ const Contact = () => {
 
                                 <Button
                                     type="submit"
-                                    className="w-100 fw-bold"
+                                    className="w-100 fw-bold hover_effect"
                                     style={{
                                         backgroundColor: "#0d6efd",
                                         border: "none",
