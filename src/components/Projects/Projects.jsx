@@ -38,16 +38,16 @@ const projects = [
 
     },
     {
-        image: "/project3.jpg",
+        image: "/images/rklibrary.png",
         title: "Rk Library",
         tags: "EdTech, Library Management, Book Inventory",
         description: ["Rk Library is a web-based library management system inspired by the manual, paper-based process used in my college library. The goal was to digitize the entire book issue workflow for students and administrators. Students can browse available books, submit issue requests online, and track the status of their requests through a clean, intuitive interface—eliminating the need for physical forms and in-person queues.", "The admin panel allows library staff to manage book inventories, review and approve issue requests, and organize book lots efficiently.This system streamlines day - to - day operations, improves transparency, and reduces human error.By transforming a fully offline process into a digital platform, Rk Library offers a practical and scalable solution for modernizing traditional library systems."],
         client: null,
         domain: "Edtech",
         languages: "Javscript",
-        techStack: "React.js, Next.js, Node.js, Express.js, MongodDB, Redux,Bootstrap",
+        techStack: "React.js, Next.js, Node.js, Express.js, MongodDB, Redux,Bootstrap, styled-component",
         role: "Full Stack Developer",
-        link: "https://vahansuraksha.com/"
+        link: "https://rklibrary-client.vercel.app/"
     },
     {
         image: "/images/portfolio.png",
