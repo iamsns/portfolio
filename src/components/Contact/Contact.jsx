@@ -25,12 +25,10 @@ const Contact = () => {
             }
         )
     };
-
-
     return (
         <div
             style={{
-                background: "linear-gradient(90deg, #0c2a48 0%, #000407 100%)",
+                background: "linear-gradient(90deg, #000407 0%, #0c2a48 100%)",
                 padding: "4rem 0",
                 color: "#fff",
             }}

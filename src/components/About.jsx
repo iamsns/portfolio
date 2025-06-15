@@ -60,11 +60,11 @@ const About = () => {
                             </p>
 
                             <Row className="text-center text-md-start mt-4 justify-content-center justify-content-md-start">
-                                <Col xs={4} className='about_details me-2'>
+                                <Col xs={5} sm={4} className='about_details me-2'>
                                     <h3>3.6+</h3>
                                     <p className="text-light" style={{ opacity: 0.7 }}>Years Experience</p>
                                 </Col>
-                                <Col xs={4} className='about_details'>
+                                <Col xs={5}  sm={4}className='about_details'>
                                     <h4>8+</h4>
                                     <p className="text-light" style={{ opacity: 0.7 }}>Projects</p>
                                 </Col>

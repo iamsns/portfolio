@@ -22,12 +22,8 @@
 }
 
 @media (max-width: 650px) {
-    .custom-arrow.next {
-        right: 10px;
-    }
-
-    .custom-arrow.prev {
-        left: 10px;
+    .custom-arrow.next, .custom-arrow.prev {
+        display: none;
     }
 }
 

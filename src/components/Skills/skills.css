@@ -1,0 +1,40 @@
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 0 auto;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: float 2.5s ease-in-out infinite;
+}
+.skill-icon-wrapper:hover {
+  transform: scale(1.2) !important;
+}
+
+.skill-icon-wrapper {
+  background-color: #0d0d0d;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 15px 20px;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.7s ease;
+}
