@@ -10,13 +10,15 @@ const Heading = () => {
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end me-3">
-                <div className="d-flex align-items-center">
-                    <Nav className="me-5 align-items-center">
+                <div className="d-flex align-items-center  justify-content-center">
+                    <Nav className="align-items-center">
                         <Nav.Link href="#home">HOME</Nav.Link>
                         <Nav.Link href="#about">ABOUT ME</Nav.Link>
                         <Nav.Link href="#projects">PROJECTS</Nav.Link>
+                        <Nav.Link href="#experience">EXPERIENCE</Nav.Link>
+                        <Nav.Link href="#skills">SKILLS</Nav.Link>
                         <Nav.Link href="#contact">CONTACTS</Nav.Link>
-                        <a href="/ShivNarayanSharma_Resume.pdf" download target='_blank'><Button variant="primary" className="px-4 py-2 ms-3 hover_effect cursor-pointer" >
+                        <a href="/ShivNarayanSharma_Resume.pdf" download target='_blank'><Button variant="primary" className="px-4 py-2 ms-md-3 ms-0 hover_effect cursor-pointer" >
                             Resume
                             <FaDownload className="social-icon text-white ms-1" style={{ fontSize: "14px" }} />
                         </Button></a>
